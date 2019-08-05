@@ -6,6 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  isEmptyUsername = false;
   username = "";
   title = 'assignment2';
+
+  onUpdateUsername(event) {
+    this.isEmptyUsername = true;
+  }
+
+  onAddUsername(event) {
+    this.username = "";
+  }
 }
