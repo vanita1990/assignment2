@@ -3,7 +3,7 @@
 <button [disabled]="username==''?true :false" (click)="onAddUsername($event)">Add Username</button>
 <br>
 <br>
-<input type="text" id="value1">
-<input type="text" id="value2">
-<button (click)="onAddition($event)">+</button>
-<p [innerText]="result"></p>
+<input type="text" [(ngModel)]="value1">
+<input type="text" [(ngModel)]="value2">
+<button [disabled]="value1&&value2==0 ?true:false" (click)="onAddition($event)">+</button>
+<p [innerText]="(+value1 + +value2)"></p>
