@@ -1,3 +1,9 @@
 <input type="text" [(ngModel)]="username" (input)="onUpdateUsername($event)">
 <p>{{username}}</p>
-<button [disabled]="!isEmptyUsername" (click)="onAddUsername($event)">Add</button>
+<button [disabled]="username==''?true :false" (click)="onAddUsername($event)">Add Username</button>
+<br>
+<br>
+<input type="text" id="value1">
+<input type="text" id="value2">
+<button (click)="onAddition($event)">+</button>
+<p [innerText]="result"></p>
